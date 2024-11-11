@@ -1,24 +1,18 @@
 package entity;
 
-/**
- * The representation of a password-protected user for our program.
- */
-public class User {
 
-    private final String name;
-    private final String password;
+public abstract class User {
+    String name;
+    String password;
+    String email;
 
-    public User(String name, String password) {
+    public User(String name, String password, String email) {
         this.name = name;
         this.password = password;
+        this.email = email;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
+    public abstract String getName();
+    public abstract String getPassword();
 
 }
